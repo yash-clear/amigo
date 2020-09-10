@@ -36,17 +36,14 @@ async def print(ctx, *args):
 async def ping(ctx):
 	await ctx.channel.send("pong")
 	
-'''
+
+@client.command(help="say hello to amigo")
+async def hello(ctx):
+	await ctx.channel.send("Hello, I hope you brought a pizza for me")
+
+
+
 @client.event
-async def on_message(message):
-	if message.content.startswith == "!hello":
-		await message.channel.send("Hello, I hope you brought a pizza for me")
-
-	await client.process_commands(message)
- '''
-
-
-@client.command(help="I have lots of jokes")
 async def on_message(message):
     if message.author == client.user:
         return
@@ -59,7 +56,14 @@ async def on_message(message):
             await message.channel.send("Couldn't get joke from API. Try again later.")
         else:
             await message.channel.send(joke['setup'] + '\n' + joke['punchline'] )
-        await client.process_commands(message)
+    await client.process_commands(message)
 
-
+'''       
+@client.event
+async def on_member_join(member):
+    await member.create_dm()
+    await member.dm_channel.send(
+        f'Hi {member.name}, welcome to Coding Club IIT Jammu Discord server.')
+    await logs.print(f'{member.mention} joined Server!')
+'''
 client.run(DISCORD_TOKEN)
