@@ -1,3 +1,8 @@
 # amigo
-It is a bot in discord channel. Performs all the basic fucnctions (ping,hi,embedded msgs)and it is linkage to jokes api,
-cmds starts with '!'
+It is a bot in discord in Coding Development Channel.
+Performs all the basic functions 
+-ping
+-hello
+-can send embedded messages
+-linked to jokes api
+Cmd(s) starts with '!'
