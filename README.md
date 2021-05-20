@@ -1,4 +1,4 @@
-# amigo
+# 🤖 amigo
 It is a bot in discord in Coding Club Development Channel. <br />
 Performs all the basic functions <br />
 -ping<br />
